@@ -4,13 +4,13 @@ import { colors } from '../../styles/theme';
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#f7f8fb',
-        padding: 20
+        padding: 10,
+        flex:1
     },
     postBlock: {
-        backgroundColor: '#fff',
-        marginVertical: 10,
+        backgroundColor: '#f7f8fb',
         borderRadius: 5,
-        elevation: 3
+        elevation: 3,
     },
     postBlock2: {
         backgroundColor: '#f7f8fb',
@@ -29,11 +29,30 @@ const styles = StyleSheet.create({
     },
     block: {
         padding: 10,
-        margin:10,
+        marginVertical:10,
         flex:1,
         backgroundColor:colors.white,
         elevation:3,
         borderRadius:5
+    },
+    ads:{
+        width:200,
+        height:200,
+        resizeMode:'contain'
+    },
+    expandBlock:{
+        borderWidth:1,
+        borderColor:colors.borderColor,
+        borderRadius:10,
+        margin:20,
+        padding:5,
+        alignItems:'center',
+        justifyContent:'center',
+        flexDirection:'row'
+    },
+    extext:{
+        color:colors.primaryColor,
+        marginRight:10
     },
 });
 
