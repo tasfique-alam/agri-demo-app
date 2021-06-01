@@ -23,7 +23,6 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     post: {
-        color: colors.primaryColor,
         paddingVertical:5,
         fontSize:15
     },

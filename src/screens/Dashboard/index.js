@@ -68,7 +68,7 @@ export default Dashboard = props => {
     const renderPostsItem = ({ item, i }) => (
 
         <Block style={styles.item} margin={[0, 0, 10, 0]}>
-            <Text style={styles.post}>{item.title}</Text>
+            <Text bold textColor style={styles.post}>{item.title}</Text>
 
             { expand &&
                 <Block flex={false}>
@@ -91,6 +91,20 @@ export default Dashboard = props => {
                 <Text style={styles.extext}>Click to {expand ? 'hide' : 'show'} post details</Text>
                 <MaterialCommunityIcons color={colors.primaryColor} size={25} name={expand ? "arrow-up-drop-circle-outline" : "arrow-down-drop-circle-outline"} />
             </TouchableOpacity>
+            {Math.random() < 0.1 && (
+                <Block block >
+                    <Block flex={false} style={styles.postBlock2}>
+                        <Text style={styles.title}>posts</Text>
+                    </Block>
+                    <Carousel
+                        ref={(c) => { _carousel = c; }}
+                        data={ADS}
+                        renderItem={renderAdsItem}
+                        sliderWidth={Dimensions.get('window').width}
+                        itemWidth={170}
+                    />
+                </Block>
+            )}
         </Block>
     );
 
@@ -116,20 +130,14 @@ export default Dashboard = props => {
                         ListHeaderComponent={
                             <Block block >
                                 <Block flex={false} style={styles.postBlock2}>
-                                    <Text style={styles.title}>posts</Text>
+                                    <Text style={styles.title}>Recent posts</Text>
                                 </Block>
                             </Block>
 
                         }
-                        ListFooterComponent={
-                            <Carousel
-                                ref={(c) => { _carousel = c; }}
-                                data={ADS}
-                                renderItem={renderAdsItem}
-                                sliderWidth={Dimensions.get('window').width}
-                                itemWidth={170}
-                            />
-                        }
+                    // ListFooterComponent={
+
+                    // }
                     />
                 </Block>
             </SafeAreaView>
