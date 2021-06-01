@@ -66,7 +66,7 @@ const Navbar = ({ onPress, title, heading, color }) => {
                 </Block>
             </Block>}
             {profile && <Block flex={false} style={styles.expandSea}>
-                <TouchableOpacity style={styles.devide}>
+                <TouchableOpacity style={styles.devide} onPress={()=> Actions.drawer_profile()}>
                     <Ionicons name="person-circle-sharp" color={colors.borderColor} style={{ marginRight: 5 }} size={18} />
                     <Text textColor>Profile</Text>
                 </TouchableOpacity>

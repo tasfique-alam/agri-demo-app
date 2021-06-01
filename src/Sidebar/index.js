@@ -44,30 +44,30 @@ export default Sidebar = (props) => {
                 </TouchableOpacity>
                 {posts &&
                     <Block flex={false} style={styles.posts}>
-                        <TouchableOpacity style={{padding:5}}>
+                        <TouchableOpacity style={{ padding: 5 }}>
                             <Text textColor>Add Posts</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={{padding:5}}>
+                        <TouchableOpacity style={{ padding: 5 }}>
                             <Text textColor>Show My Posts</Text>
                         </TouchableOpacity>
                     </Block>
                 }
                 {friends &&
                     <Block flex={false} style={styles.friends}>
-                        <TouchableOpacity style={{padding:5}}>
+                        <TouchableOpacity style={{ padding: 5 }} onPress={() => Actions.drawer_friends()}>
                             <Text textColor>Add Friends</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={{padding:5}}>
+                        <TouchableOpacity style={{ padding: 5 }}>
                             <Text textColor>Show My Friends</Text>
                         </TouchableOpacity>
                     </Block>
                 }
                 {files &&
                     <Block flex={false} style={styles.files}>
-                        <TouchableOpacity style={{padding:5}}>
+                        <TouchableOpacity style={{ padding: 5 }}>
                             <Text textColor>Add Files</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={{padding:5}}>
+                        <TouchableOpacity style={{ padding: 5 }}>
                             <Text textColor>Show My Files</Text>
                         </TouchableOpacity>
                     </Block>

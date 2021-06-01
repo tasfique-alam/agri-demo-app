@@ -2,7 +2,8 @@ import React, { useEffect } from 'react'
 import { Router, Scene, Stack } from 'react-native-router-flux'
 import { BackHandler } from "react-native"
 import Sidebar from '../Sidebar'
-import Welcome from '../screens/Welcome'
+import Profile from '../screens/Profile'
+import Friends from '../screens/Friends'
 
 import Dashboard from '../screens/Dashboard'
 
@@ -25,17 +26,29 @@ const Routes = props => {
     return (
         <Router backAndroidHandler={onBackPress}>
             <Scene key='root'>
-
-                <Scene key='cadcdas' component={Welcome} hideNavBar />
-
                 <Scene
                     key="drawer_dash"
-                    initial
                     drawer
                     contentComponent={Sidebar}
                     drawerWidth={150}
                     hideNavBar>
                     <Scene key="dashboard" component={Dashboard} hideNavBar />
+                </Scene>
+                <Scene
+                    key="drawer_profile"
+                    drawer
+                    contentComponent={Sidebar}
+                    drawerWidth={150}
+                    hideNavBar>
+                    <Scene key="profile" component={Profile} hideNavBar />
+                </Scene>
+                <Scene
+                    key="drawer_friends"
+                    drawer
+                    contentComponent={Sidebar}
+                    drawerWidth={150}
+                    hideNavBar>
+                    <Scene key="friends" component={Friends} hideNavBar />
                 </Scene>
             </Scene>
         </Router>
