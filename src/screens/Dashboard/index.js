@@ -9,6 +9,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import Carousel from 'react-native-snap-carousel'
 import { colors } from "../../styles/theme"
 import { Navbar } from "../../include/NavBar"
+import { Actions } from "react-native-router-flux"
 
 
 
@@ -69,7 +70,9 @@ export default Dashboard = props => {
     const renderPostsItem = ({ item, i }) => (
 
         <Block style={styles.item} margin={[0, 0, 10, 0]}>
-            <Text bold textColor style={styles.post}>{item.title}</Text>
+            <TouchableOpacity onPress={() => Actions.drawer_details()}>
+                <Text bold textColor style={styles.post}>{item.title}</Text>
+            </TouchableOpacity>
 
             { expand &&
                 <Block flex={false}>
@@ -95,7 +98,7 @@ export default Dashboard = props => {
             {Math.random() < 0.1 && (
                 <Block block >
                     <Block flex={false} style={styles.postBlock2}>
-                        <Text style={styles.title}>posts</Text>
+                        <Text style={styles.title}>All posts</Text>
                     </Block>
                     <Carousel
                         ref={(c) => { _carousel = c; }}
@@ -121,7 +124,7 @@ export default Dashboard = props => {
     return (
 
         <Block block>
-            <Navbar/>
+            <Navbar />
             <SafeAreaView block style={styles.container}>
                 <Text textColor size={20}>Dashboard</Text>
                 <Block style={styles.block} flex={false}>

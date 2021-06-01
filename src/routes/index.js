@@ -4,6 +4,7 @@ import { BackHandler } from "react-native"
 import Sidebar from '../Sidebar'
 import Profile from '../screens/Profile'
 import Friends from '../screens/Friends'
+import PostDetails from '../screens/PostDetails'
 
 import Dashboard from '../screens/Dashboard'
 
@@ -49,6 +50,14 @@ const Routes = props => {
                     drawerWidth={150}
                     hideNavBar>
                     <Scene key="friends" component={Friends} hideNavBar />
+                </Scene>
+                <Scene
+                    key="drawer_details"
+                    drawer
+                    contentComponent={Sidebar}
+                    drawerWidth={150}
+                    hideNavBar>
+                    <Scene key="details" component={PostDetails} hideNavBar />
                 </Scene>
             </Scene>
         </Router>
