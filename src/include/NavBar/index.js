@@ -9,6 +9,7 @@ import Text from '../../components/Text'
 import styles from './styles'
 import { colors } from '../../styles/theme'
 import { useState } from "react/cjs/react.development"
+import { Actions } from "react-native-router-flux"
 
 
 
@@ -24,7 +25,7 @@ const Navbar = ({ onPress, title, heading, color }) => {
         <Block flex={false}>
             <Block row spaceBetween center flex={false} style={styles.navbar}>
                 <Block row center flex={false}>
-                    <TouchableOpacity style={styles.bars}>
+                    <TouchableOpacity style={styles.bars} onPress={() => Actions.drawerOpen()}>
                         <FontAwesome color="#fff" size={15} name="bars" />
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.application} onPress={() => setApplication(!application)}>
