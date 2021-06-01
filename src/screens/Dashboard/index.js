@@ -8,6 +8,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import Carousel from 'react-native-snap-carousel'
 import { colors } from "../../styles/theme"
+import { Navbar } from "../../include/NavBar"
 
 
 
@@ -120,6 +121,7 @@ export default Dashboard = props => {
     return (
 
         <Block block>
+            <Navbar/>
             <SafeAreaView block style={styles.container}>
                 <Text textColor size={20}>Dashboard</Text>
                 <Block style={styles.block} flex={false}>
