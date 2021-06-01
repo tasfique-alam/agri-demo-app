@@ -26,7 +26,7 @@ export default Sidebar = (props) => {
                 <Image style={styles.img} source={require('../assets/images/Social_Fish2.png')} />
                 <Text white bold size={16}>Agriculturist</Text>
 
-                <TouchableOpacity style={{ alignItems: 'center', marginTop: 40 }}>
+                <TouchableOpacity style={{ alignItems: 'center', marginTop: 40 }} onPress={()=> Actions.drawer_dash()}>
                     <FontAwesome size={20} color="#FFF" name="dashboard" />
                     <Text white size={12}>Dashboard</Text>
                 </TouchableOpacity>
